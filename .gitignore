@@ -1,0 +1,48 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Django
+staticfiles/
+media/
+*.sqlite3
+
+# Database dumps and backups: may contain client data
+*.sql
+*.dump
+*.backup
+
+# Node
+node_modules/
+dist/
+*.tsbuildinfo
+coverage/
+playwright-report/
+test-results/
+
+# Logs
+*.log
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local tool settings
+.claude/settings.local.json

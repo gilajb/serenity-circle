@@ -1,0 +1,58 @@
+@import 'tailwindcss';
+
+/* Design tokens from docs/design-system.md */
+@theme {
+  --color-navy-900: #0a2342;
+  --color-navy-700: #12355b;
+  --color-teal-600: #0e8a9e;
+  --color-teal-500: #17a2b8;
+  --color-teal-100: #ddf1f5;
+  --color-teal-50: #eff8fa;
+  --color-gold-500: #f0b94d;
+  --color-gold-600: #d9a036;
+  --color-cream-50: #fbf8f2;
+  --color-ink-700: #34495e;
+  --color-line: #cfe6ec;
+  --color-danger: #b3261e;
+  --color-success: #1e7b4f;
+
+  --font-serif: 'Lora Variable', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Nunito Sans Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-script: 'Caveat Variable', 'Segoe Script', cursive;
+
+  --radius-card: 16px;
+  --radius-field: 10px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink-700 antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-serif font-bold text-navy-900;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-teal-600;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
